@@ -5,8 +5,6 @@ workflows:
       xcode: latest
     scripts:
       - cd ios
-      - ls -l        # pour vérifier que Package.swift est là
-      - swift package generate-xcodeproj
-      - xcodebuild -project iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO clean build
-    artifacts:
-      - ios/build/Debug-iphonesimulator/*.app
+      - ls -l
+      - cd ios
+      - ls -l
