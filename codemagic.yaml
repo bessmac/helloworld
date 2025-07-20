@@ -4,10 +4,5 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - cd ios
+      - cd ios/ios
       - ls -l
-      - cat Package.swift
-      - swift package generate-xcodeproj
-      - xcodebuild -project iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO clean build
-    artifacts:
-      - ios/build/Debug-iphonesimulator/*.app
